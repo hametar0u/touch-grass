@@ -13,11 +13,7 @@
     "manifest_version": 3,
     "web_accessible_resources": [
         {
-            "resources": ["/animation/animation.html", 
-                          "/animation/jquery-3.4.1.min.js", 
-                          "/animation/animate.js",
-                          "/animation/assets/goose1"
-                        ],
+            "resources": ["/animation/*"],
             "matches": ["<all_urls>"]
         }
     ]
