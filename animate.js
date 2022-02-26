@@ -1,16 +1,14 @@
 $(document).ready(function(){
     console.log("script running");
-    // var idArray = [];
-    // $('.a').each(function () {
-    //     idArray.push(this.id);
-    // });
-    // for (var item in idArray) {
-    //     animateDiv(item);
-    // }
-    
-    animateDiv('#a');
-    // animateDiv('.c');
-    // animateDiv('.d');
+    var idArray = [];
+    $('.a').each(function () {
+        idArray.push(this.id);
+    });
+    console.log(idArray);
+
+    for (var i = 0; i < idArray.length; i++) {
+        animateDiv('#' + idArray[i]);
+    }
   });
 
   function makeNewPosition(){
@@ -28,7 +26,7 @@ $(document).ready(function(){
 
   function animateDiv(myID){
       var newq = makeNewPosition();
-      $(myID).animate({ top: newq[0], left: newq[1] }, 1000,   function(){
+      $(myID).animate({ top: newq[0], left: newq[1] }, 2000,   function(){
         animateDiv(myID);        
       });
       
