@@ -1,6 +1,12 @@
-
 if (typeof init === 'undefined') {
+
     const init = function() {
+        var jQuery = document.createElement("script");
+        jQuery.src = "jquery"
+        var animationScript = document.createElement("script");
+        animationScript.src = "src/animation/animate.js";
+
+
         const injectElement = document.createElement('div');
         injectElement.className = 'element';
         injectElement.innerHTML = 'Hello this is reminder to touch grass';
