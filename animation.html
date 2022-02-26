@@ -14,43 +14,9 @@
 
   </head>
   <body>
+    <div class='a' id="a1"></div>
+    <div class='a' id="a2"></div>
     <div class='a'></div>
-    <div class='b'></div>
-    <div class='c'></div>
-    <div class='d'></div>
-    <button>click me</button>
+    <div class='a'></div>
   </body>
 </html>
-
-<!-- <script>
-  // document.addEventListener(click, animateDiv('a'));
-
-  $(document).ready(function(){
-    console.log("script running");
-    animateDiv('a'); //??
-    animateDiv('b');
-    animateDiv('c');
-    animateDiv('d');
-  });
-
-  function makeNewPosition(){
-      
-      // Get viewport dimensions (remove the dimension of the div)
-      var h = $(window).height() - 50;
-      var w = $(window).width() - 50;
-      
-      var nh = Math.floor(Math.random() * h);
-      var nw = Math.floor(Math.random() * w);
-      
-      return [nh,nw];    
-      
-  }
-
-  function animateDiv(myclass){
-      var newq = makeNewPosition();
-      document.getElementsByClassName(myclass).animate({ top: newq[0], left: newq[1] }, 1000,   function(){
-        animateDiv(myclass);        
-      });
-      
-  };
-</script> -->

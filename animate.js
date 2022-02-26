@@ -1,9 +1,16 @@
 $(document).ready(function(){
     console.log("script running");
-    animateDiv('a'); //??
-    animateDiv('b');
-    animateDiv('c');
-    animateDiv('d');
+    // var idArray = [];
+    // $('.a').each(function () {
+    //     idArray.push(this.id);
+    // });
+    // for (var item in idArray) {
+    //     animateDiv('.a');
+    // }
+    
+    animateDiv('.a');
+    // animateDiv('.c');
+    // animateDiv('.d');
   });
 
   function makeNewPosition(){
