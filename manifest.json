@@ -4,8 +4,6 @@
     "version": "1.0",
     "description": "A reminder to touch grass now and then.",
     "icons": {
-        "128": "icon128.png",
-        "48": "icon48.png",
         "16": "icon16.png"
     },
     "browser_action": {
