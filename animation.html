@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" 
+          content="IE=edge" />
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0" />
+  
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./animate.js"></script>
+
+
+  </head>
+  <body>
+    <div class='a'></div>
+    <div class='b'></div>
+    <div class='c'></div>
+    <div class='d'></div>
+    <button>click me</button>
+  </body>
+</html>
+
+<!-- <script>
+  // document.addEventListener(click, animateDiv('a'));
+
+  $(document).ready(function(){
+    console.log("script running");
+    animateDiv('a'); //??
+    animateDiv('b');
+    animateDiv('c');
+    animateDiv('d');
+  });
+
+  function makeNewPosition(){
+      
+      // Get viewport dimensions (remove the dimension of the div)
+      var h = $(window).height() - 50;
+      var w = $(window).width() - 50;
+      
+      var nh = Math.floor(Math.random() * h);
+      var nw = Math.floor(Math.random() * w);
+      
+      return [nh,nw];    
+      
+  }
+
+  function animateDiv(myclass){
+      var newq = makeNewPosition();
+      document.getElementsByClassName(myclass).animate({ top: newq[0], left: newq[1] }, 1000,   function(){
+        animateDiv(myclass);        
+      });
+      
+  };
+</script> -->
