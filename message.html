@@ -1,3 +1,23 @@
-<div>
-    <h1>Touch Grass</h1>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    <div>
+        <h1>A very regular webpage</h1>
+        <button onclick="touchgrass()"> don't click this button </button>
+    </div>
+</body>
+</html>
+
+
+<script>
+    function touchgrass() {
+        let div = document.createElement("div");
+        div.append("touch grass");
+        document.getElementById("body").append(div);
+    }
+</script>
