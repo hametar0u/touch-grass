@@ -5,10 +5,10 @@ $(document).ready(function(){
     //     idArray.push(this.id);
     // });
     // for (var item in idArray) {
-    //     animateDiv('.a');
+    //     animateDiv(item);
     // }
     
-    animateDiv('.a');
+    animateDiv('#a');
     // animateDiv('.c');
     // animateDiv('.d');
   });
@@ -26,10 +26,10 @@ $(document).ready(function(){
       
   }
 
-  function animateDiv(myclass){
+  function animateDiv(myID){
       var newq = makeNewPosition();
-      $(myclass).animate({ top: newq[0], left: newq[1] }, 1000,   function(){
-        animateDiv(myclass);        
+      $(myID).animate({ top: newq[0], left: newq[1] }, 1000,   function(){
+        animateDiv(myID);        
       });
       
   };
