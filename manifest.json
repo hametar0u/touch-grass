@@ -10,5 +10,11 @@
     },
     "permissions": ["scripting"],
     "host_permissions": ["<all_urls>"],
-    "manifest_version": 3
+    "manifest_version": 3,
+    "web_accessible_resources": [
+        {
+            "resources": ["animation.html"],
+            "matches": ["<all_urls>"]
+        }
+    ]
 }
