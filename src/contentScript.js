@@ -7,7 +7,7 @@ if (typeof init === 'undefined') {
         document.body.insertBefore(injectElement, document.body.firstChild);
         // document.body.appendChild(injectElement);
         var iframe  = document.createElement ('iframe');
-        iframe.src  = chrome.runtime.getURL ('/animation.html');
+        iframe.src  = chrome.runtime.getURL ('/animation/animation.html');
         iframe.style.position = "absolute";
         iframe.style.width = "100%";
         iframe.style.height = "100%";

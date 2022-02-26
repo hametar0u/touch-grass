@@ -13,7 +13,7 @@
     "manifest_version": 3,
     "web_accessible_resources": [
         {
-            "resources": ["animation.html"],
+            "resources": ["/animation/animation.html"],
             "matches": ["<all_urls>"]
         }
     ]
