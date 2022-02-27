@@ -30,7 +30,7 @@
         }
     ],
     "content_scripts": [{
-        "matches":["<all_urls>"],
+        "matches":["https://www.instagram.com/*", "https://www.facebook.com/*", "https://www.twitter.com/*", "https://web.cs.ucla.edu/classes/fall21/cs35L/index.html"],
         "js":["/animation/jquery-3.4.1.min.js","/animation/animate.js"],
         "run_at": "document_idle"
     }]

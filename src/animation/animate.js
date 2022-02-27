@@ -47,14 +47,9 @@ $(document).ready(function(){
         document.head.append(jQuery);
         document.head.append(animationScript);
 
-        // const wrapperDiv = document.createElement("div");
-        // wrapperDiv.className = "wrapper";
-
-
         const injectElement = document.createElement('div');
         injectElement.className = 'element';
         injectElement.innerHTML = 'Hello this is reminder to touch grass';
-        // wrapperDiv.appendChild(injectElement);
 
         chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
             console.log("stop spawn");
@@ -65,13 +60,6 @@ $(document).ready(function(){
 
 
         document.body.appendChild(injectElement);
-        // var iframe  = document.createElement ('iframe');
-        // iframe.src  = chrome.runtime.getURL ('/animation/animation.html');
-        // iframe.style.position = "fixed";
-        // iframe.style.width = "100%";
-        // iframe.style.height = "100%";
-        // iframe.style.zIndex = "100";
-        // document.body.insertBefore(iframe, document.body.firstChild);
     }
     init();
 
