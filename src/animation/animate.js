@@ -3,10 +3,20 @@ var counter = 0;
 $(document).ready(function(){
     console.log("script running");
 
+    function deleteDuck(e) {
+        //because img is on top of div so source element = img
+        var target = e.srcElement;
+        console.log(target);
+        var targetParent = target.parentNode;
+        console.log(targetParent);
+        targetParent.parentNode.removeChild(targetParent);
+    }
+
     function createDuck(i) {
         const duck = document.createElement('div');
         duck.className = 'duck';
         duck.id = 'duck' + JSON.stringify(i);
+        duck.addEventListener("click", deleteDuck); //you can't pass in params to this function because it'll get evaluated as a value
 
         const duckImg = document.createElement('img');
         var num = counter % 4 + 1;
@@ -19,6 +29,7 @@ $(document).ready(function(){
 
     const init = function() {
 
+        await new Promise(r => setTimeout(r, 2000));
         createDuck(1);
         createDuck(2);
 
