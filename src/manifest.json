@@ -23,7 +23,8 @@
                 "/animation/styles.css",
                 "/animation/jquery-3.4.1.min.js",
                 "/animation/animate.js",
-                "/animation/assets/*"
+                "/animation/assets/*",
+                "/popup.js"
                         ],
             "matches": ["<all_urls>"]
         }
