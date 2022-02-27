@@ -1,4 +1,6 @@
 var counter = 0;
+var spawnOn = true;
+var spawnCap = 50;
 
 $(document).ready(function(){
     console.log("script running");
@@ -54,7 +56,12 @@ $(document).ready(function(){
         injectElement.innerHTML = 'Hello this is reminder to touch grass';
         // wrapperDiv.appendChild(injectElement);
 
-
+        chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+            console.log("stop spawn");
+            if (request == 'stop-spawn') {
+                spawnOn = false;
+            }
+        });
 
 
         document.body.appendChild(injectElement);
@@ -69,7 +76,7 @@ $(document).ready(function(){
     init();
 
     setInterval(()=>{
-        createDuck(counter);
+    if (counter < spawnCap) {createDuck(counter);
     var idArray = [];
     $('.duck').each(function () {
         idArray.push(this.id);
@@ -79,7 +86,7 @@ $(document).ready(function(){
     for (var i = 0; i < idArray.length; i++) {
         animateDiv('#' + idArray[i]);
     }
-    
+    }
     }, 3000);
   });
 

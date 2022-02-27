@@ -1,8 +1,7 @@
 function func () {
     console.log("Delet");
-    const elements = document.getElementsByClassName('duck');
-    while (elements.length > 0) {
-        elements[0].parentNode.removeChild(elements[0]);
-    }
+    chrome.runtime.sendMessage('stop-spawn', () => {
+        console.log("attempting to contact goose control...");
+    });
 }
 document.getElementById('myPopup').addEventListener("click", func); 
