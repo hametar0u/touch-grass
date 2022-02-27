@@ -62,7 +62,6 @@ $(document).ready(function(){
     init();
 
     var idArray = [];
-    console.log($('div'));
     $('.duck').each(function () {
         idArray.push(this.id);
     });
