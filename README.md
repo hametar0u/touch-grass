@@ -9,6 +9,11 @@ Our goal, in creating this Chrome extension, is to facilitate your awakening fro
 
 It's time, User. Time to wake up. Time to go touch some grass.
 
+## Usage
+After cloning the repo, open up your Chrome's extension page and check Developer mode. There should now be a toolbar with the "Load Unpacked" option. Click that and select the src folder as the path to load the extension. 
+
+This extension currently works with Instagram, Twitter, and Facebook. If you want some more functionality, feel free to edit the `manifest.json` file and reload the package, at your own risk. 
+
 ## Project Design 
 We made a chrome plugin that does something every time you go on a social media, after a certain period of time (shortened for demonstration), ducks/geese start floating around on your screen
 
