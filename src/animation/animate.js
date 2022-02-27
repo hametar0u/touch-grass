@@ -29,10 +29,6 @@ $(document).ready(function(){
 
     const init = function() {
 
-        await new Promise(r => setTimeout(r, 2000));
-        createDuck(1);
-        createDuck(2);
-
         var stylesheet = document.createElement("link");
         stylesheet.rel= "stylesheet";
         stylesheet.href = chrome.runtime.getURL ("/animation/styles.css");
@@ -72,6 +68,8 @@ $(document).ready(function(){
     }
     init();
 
+    setInterval(()=>{
+        createDuck(counter);
     var idArray = [];
     $('.duck').each(function () {
         idArray.push(this.id);
@@ -81,6 +79,8 @@ $(document).ready(function(){
     for (var i = 0; i < idArray.length; i++) {
         animateDiv('#' + idArray[i]);
     }
+    
+    }, 3000);
   });
 
   function makeNewPosition(){
@@ -96,7 +96,7 @@ $(document).ready(function(){
       
   }
 
-  function animateDiv(myID){
+function animateDiv(myID){
       var newq = makeNewPosition();
       $(myID).animate({ top: newq[0], left: newq[1] }, 2000,   function(){
         animateDiv(myID);        
